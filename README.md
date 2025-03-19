@@ -1,5 +1,5 @@
 # Contextual-Image-Caption-Creation-Using-Object-Positional-Embedding-and-Generative-Models
-##Overview
+#Overview
 This project presents a novel approach to image captioning by integrating object detection, spatial relationship modeling, and advanced language generation. The system leverages YOLOv4 for precise object detection, constructs scene graphs to capture spatial relationships, and utilizes Generative model to generate contextually rich captions.
 Getting Started
 To start working with this project, follow these steps:
