@@ -24,7 +24,7 @@ wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/data/coco.names
 •	Caption Generation: Employs GPT models for contextually rich captions. 
 •	Cross-Platform Compatibility: Supports Windows, macOS, and Linux environments.
 
-Project Structure
+# Project Structure
 .  
 ├── model/  
 │   ├── yolov4.weights  
