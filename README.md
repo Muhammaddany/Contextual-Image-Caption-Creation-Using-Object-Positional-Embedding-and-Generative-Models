@@ -6,20 +6,19 @@ To start working with this project, follow these steps:
 
 •	Clone the repository:
 
-git clone https://github.com/yourusername/contextual-image-caption.git
-cd contextual-image-caption
+    git clone https://github.com/yourusername/contextual-image-caption.git cd contextual-image-caption
 
 •	Install the required packages:
 
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 •	Download the YOLOv4 weights and configuration files
 
-mkdir -p model
-cd model
-wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
-wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov4.cfg
-wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/data/coco.names
+    mkdir -p model
+    cd model
+    wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
+    wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov4.cfg
+    wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/data/coco.names
 
 # Features
 •	Object Detection: Utilizes YOLOv4 for accurate object detection. 
