@@ -5,13 +5,16 @@ Getting Started
 To start working with this project, follow these steps:
 
 •	Clone the repository:
+
 git clone https://github.com/yourusername/contextual-image-caption.git
 cd contextual-image-caption
 
 •	Install the required packages:
+
 pip install -r requirements.txt
 
 •	Download the YOLOv4 weights and configuration files
+
 mkdir -p model
 cd model
 wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
