@@ -22,9 +22,13 @@ To start working with this project, follow these steps:
 
 # Features
 •	Object Detection: Utilizes YOLOv4 for accurate object detection. 
+
 •	Scene Graph Generation: Constructs spatial relationships between detected objects. 
+
 •	Caption Generation: Employs GPT models for contextually rich captions. 
+
 •	Cross-Platform Compatibility: Supports Windows, macOS, and Linux environments.
+
 
 # Project Structure
 .  
