@@ -1,5 +1,5 @@
 # Contextual-Image-Caption-Creation-Using-Object-Positional-Embedding-and-Generative-Models
-#Overview
+  # Overview
 This project presents a novel approach to image captioning by integrating object detection, spatial relationship modeling, and advanced language generation. The system leverages YOLOv4 for precise object detection, constructs scene graphs to capture spatial relationships, and utilizes Generative model to generate contextually rich captions.
 Getting Started
 To start working with this project, follow these steps:
@@ -18,13 +18,13 @@ wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optim
 wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov4.cfg
 wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/data/coco.names
 
-##Features
+# Features
 •	Object Detection: Utilizes YOLOv4 for accurate object detection. 
 •	Scene Graph Generation: Constructs spatial relationships between detected objects. 
 •	Caption Generation: Employs GPT models for contextually rich captions. 
 •	Cross-Platform Compatibility: Supports Windows, macOS, and Linux environments.
 
-##Project Structure
+Project Structure
 .  
 ├── model/  
 │   ├── yolov4.weights  
@@ -43,9 +43,9 @@ wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/data/coco.names
 └── README.md
 
 
-##Installation
+Installation
 
-###On Linux/macOS
+On Linux/macOS
 git clone https://github.com/yourusername/contextual-image-caption.git
 cd contextual-image-caption
 pip install -r requirements.txt
@@ -55,7 +55,7 @@ wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov4.cfg
 wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/data/coco.names
 
 
-###On Windows
+On Windows
 •	Install Git and clone the repository:
 
 git clone https://github.com/yourusername/contextual-image-caption.git
@@ -73,7 +73,7 @@ curl -O https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_op
 curl -O https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov4.cfg
 curl -O https://raw.githubusercontent.com/AlexeyAB/darknet/master/data/coco.names
 
-##Dependencies
+Dependencies
 numpy==1.21.0  
 opencv-python==4.5.3  
 matplotlib==3.4.3  
@@ -85,9 +85,9 @@ cython
 yacs  
 tqdm
 
-##Implementation Details
+Implementation Details
 
-###Object Detection Module
+Object Detection Module
 •	Technology: YOLOv4
 •	Image Preprocessing: 
 o	Resize to 416x416
@@ -96,12 +96,12 @@ o	BGR to RGB conversion
 •	Parameters: 
 o	Confidence threshold: 0.5
 o	Non-maximum suppression threshold: 0.4
-###Scene Graph Generation
+Scene Graph Generation
 1.	Object Detection Results Processing: Extract detected objects and their bounding boxes.
 2.	Relationship Prediction: Predict spatial and contextual relationships between objects.
 3.	Graph Construction: Use NetworkX to create a directed graph representing the scene.
 4.	Visualization: Generate visual representations of the scene graph using Matplotlib.
-###Caption Generation
+Caption Generation
 •	Technology: GPT model (text-davinci-002)
 •	Parameters: 
 o	Temperature: 0.6
@@ -110,9 +110,9 @@ o	Max tokens: 200
 o	Frequency penalty: 0
 o	Presence penalty: 0
 
-##Usage Instructions
+Usage Instructions
 
-###Upload image 
+Upload image 
 
 import cv2
 import matplotlib.pyplot as plt
@@ -120,7 +120,7 @@ from google.colab import files
 
 uploaded = files.upload()
 
-###Get the filename
+Get the filename
 filename = list(uploaded.keys())[0]  # Get the uploaded file name dynamically
 
 # Read the image file
