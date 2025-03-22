@@ -475,10 +475,14 @@ tqdm
     response = GPT_Completion(scene_graph_text)
     print("Generated Caption:", response)
 
-# Results
+#  Results
 The system generates:
     
 1. Object Detection Visualization: Image with bounding boxes and labels.
 2.	Scene Graph Visualization: Graph showing spatial relationships.
 3.	Natural Language Captions: Context-aware descriptions.
+
+** Evaluation metrics **  
+BLEU, ROUGE, METEOR, CIDEr, and SPICE are used to evaluate the quality of machine-generated captions. These metrics can effectively analyze many datasets containing thousands or even tens of thousands of images. However, a challenge arises when thoroughly examining the dataset. The existing captions are found to be lacking in accuracy. As a result, when the caption is evaluated based on these metrics, it becomes evident that consistent production of correct captions is not achieved. That is why expert surveys are used.
+Survery form: https://docs.google.com/forms/d/e/1FAIpQLSfkLlBj6UdrTU6Ixpb0UWGRRitybHly4YKqsxQ8nPMpE-chcA/viewform 
 
