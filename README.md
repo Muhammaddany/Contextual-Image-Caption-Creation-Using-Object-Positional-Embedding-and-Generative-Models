@@ -1,7 +1,7 @@
 # Contextual-Image-Caption-Creation-Using-Object-Positional-Embedding-and-Generative-Models
 
 ## Overview
-This project presents a novel approach to image captioning by integrating object detection, spatial relationship modeling, and advanced language generation. The system leverages YOLOv4 for precise object detection, constructs scene graphs to capture spatial relationships, and utilizes Generative model to generate contextually rich captions.
+This project presents a novel approach to image captioning by integrating object detection, spatial relationship modeling, and advanced language generation. The system leverages YOLOv4 for precise object detection, constructs scene graphs to capture spatial relationships, and utilizes Generative model to generate contextually rich captions. In our scenario, caption generation is the assigned task. Multiple models are integrated with the state-of-the-art language generator transformer. an  expert survey was conducted to assess caption fluency and relevance. The survey link is included at the end of this repository.
 Getting Started
 To start working with this project, follow these steps:
 
@@ -13,16 +13,16 @@ To start working with this project, follow these steps:
 
     pip install -r requirements.txt
 
-•	Download the YOLOv4 weights and configuration files
+•	Download the YOLOv5 weights and configuration files
 
     mkdir -p model
     cd model
-    wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
-    wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov4.cfg
+    wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_optimal/yolov5.weights
+    wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov5.cfg
     wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/data/coco.names
 
 ## Features
-* **Object Detection:** Utilizes YOLOv4 for accurate object detection. 
+* **Object Detection:** Utilizes YOLOv5 for accurate object detection. 
 
 * **Scene Graph Generation:** Constructs spatial relationships between detected objects. 
 
@@ -33,8 +33,8 @@ To start working with this project, follow these steps:
 ## Project Structure
 .  
 ├── model/  
-│   ├── yolov4.weights  
-│   ├── yolov4.cfg  
+│   ├── yolov5.weights  
+│   ├── yolov5.cfg  
 │   └── coco.names  
 ├── src/  
 │   ├── object_detection.py  
@@ -56,8 +56,8 @@ To start working with this project, follow these steps:
     cd contextual-image-caption
     pip install -r requirements.txt
     mkdir -p model && cd model
-    wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
-    wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov4.cfg
+    wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_optimal/yolov5.weights
+    wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov5.cfg
     wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/data/coco.names
 
 
@@ -75,8 +75,8 @@ To start working with this project, follow these steps:
 
     mkdir model
     cd model
-    curl -O https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
-    curl -O https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov4.cfg
+    curl -O https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_optimal/yolov5.weights
+    curl -O https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov5.cfg
     curl -O https://raw.githubusercontent.com/AlexeyAB/darknet/master/data/coco.names
 
 ## Dependencies
@@ -95,7 +95,7 @@ tqdm
 
 ### Object Detection Module
 
-* **Technology:** YOLOv4
+* **Technology:** YOLOv5
 
 * **Image Preprocessing:**
 
@@ -115,7 +115,7 @@ tqdm
 * **Graph Construction:** Use NetworkX to create a directed graph representing the scene.
 
 ## Caption Generation
-* **Technology:** GPT model (text-davinci-002)
+* **Technology:** GPT model (gpt-4-turbo)
 * **Parameters:** 
     * Temperature: 0.6
     * Top_p: 1
@@ -161,9 +161,9 @@ tqdm
 
     # enter the directory and download the necessary files 
     %cd model
-    !wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
+    !wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_optimal/yolov5.weights
     
-    !wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov4.cfg
+    !wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov5.cfg
     
     !wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/data/coco.names
     %cd ..
@@ -215,7 +215,7 @@ tqdm
     # Load the pre-trained model 
     yolo_model = cv2.dnn.readNetFromDarknet('model/   yolov4.cfg','model/yolov4.weights')
 
-    # Read the network layers/components. The YOLO V4 neural network has 379 components. They consist of convolutional layers (conv), rectifier linear units (relu) etc.:
+    # Read the network layers/components. The YOLO neural network has 379 components. They consist of convolutional layers (conv), rectifier linear units (relu) etc.:
     model_layers = yolo_model.getLayerNames()
     print("number of network components: " + str(len(model_layers))) 
     # print(model_layers)
@@ -226,7 +226,7 @@ tqdm
     # - model_layers[model_layer[0] - 1]: returns the indexed layer name 
     output_layers = [model_layers[model_layer - 1] for model_layer in yolo_model.getUnconnectedOutLayers()]
  
-    # YOLOv4 deploys the same YOLO head as YOLOv3 for detection with the anchor based detection steps, and three levels of detection granularity. 
+    # YOLOv5 deploys the same YOLO head as YOLOv4 for detection with the anchor based detection steps, and three levels of detection granularity. 
     print(output_layers) 
 
     # input pre-processed blob into the model
