@@ -1,7 +1,7 @@
 # Contextual-Image-Caption-Creation-Using-Object-Positional-Embedding-and-Generative-Models
 
 ## Overview
-This project presents a novel approach to image captioning by integrating object detection, spatial relationship modeling, and advanced language generation. The system leverages YOLOv4 for precise object detection, constructs scene graphs to capture spatial relationships, and utilizes Generative model to generate contextually rich captions. In our scenario, caption generation is the assigned task. Multiple models are integrated with the state-of-the-art language generator transformer. an  expert survey was conducted to assess caption fluency and relevance. The survey link is included at the end of this repository.
+This project presents a novel approach to image captioning by integrating object detection, spatial relationship modeling, and advanced language generation. The system leverages YOLOv5 for precise object detection, constructs scene graphs to capture spatial relationships, and utilizes Generative model to generate contextually rich captions. In our scenario, caption generation is the assigned task. Multiple models are integrated with the state-of-the-art language generator transformer. an  expert survey was conducted to assess caption fluency and relevance. The survey link is included at the end of this repository.
 Getting Started
 To start working with this project, follow these steps:
 
@@ -213,7 +213,7 @@ tqdm
 **3.	Object Detection**
 
     # Load the pre-trained model 
-    yolo_model = cv2.dnn.readNetFromDarknet('model/   yolov4.cfg','model/yolov4.weights')
+    yolo_model = cv2.dnn.readNetFromDarknet('model/   yolov5.cfg','model/yolov5.weights')
 
     # Read the network layers/components. The YOLO neural network has 379 components. They consist of convolutional layers (conv), rectifier linear units (relu) etc.:
     model_layers = yolo_model.getLayerNames()
