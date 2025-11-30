@@ -117,14 +117,10 @@ tqdm
 ## Caption Generation
 * **Technology:** GPT model (gpt-4-turbo)
 * **Parameters:** 
-    * Temperature: 0.6
-    * Top_p: 1
+    * Prompt Length: 100 tokens
     * Max tokens: 200
-    * Frequency penalty: 0
-    * Presence penalty: 0
-
-
-
+    * Temperature: 0.7
+    * Top_p: 1
 
 ## Usage Instructions
 
