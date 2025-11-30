@@ -118,13 +118,13 @@ tqdm
 * **Technology:** GPT model (gpt-4-turbo)
 * **Parameters:** 
     * Prompt Length: 100 tokens
-    * Max tokens: 200
+    * Max tokens: 200 tokens
     * Temperature: 0.7
     * Top_p: 1
 
 ## Usage Instructions
 
-**1. Upload Dataset**
+**1. Upload images Dataset**
 
     import cv2
     import matplotlib.pyplot as plt
