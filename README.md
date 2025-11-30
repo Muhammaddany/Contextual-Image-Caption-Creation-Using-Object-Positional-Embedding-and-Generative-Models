@@ -128,7 +128,7 @@ tqdm
 
 ## Usage Instructions
 
-**1. Upload image**
+**1. Upload Dataset**
 
     import cv2
     import matplotlib.pyplot as plt
@@ -154,7 +154,7 @@ tqdm
     plot_image(img)
     plt.show()
 
-**2.	Image Processing**
+**2.	Download YOLOv5 Weights and Configuration Files**
 
     # first create a directory to store the model
     %mkdir model
@@ -168,7 +168,7 @@ tqdm
     !wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/data/coco.names
     %cd ..
     
-    # Converting to blob object
+    # Image Preprocessing: Convert Image to Blob
 
     scalefactor = 1.0/255.0
     new_size = (416, 416)
