@@ -8,7 +8,7 @@ To start working with this project, follow these steps:
 The images originate from the following public datasets:
 - MS COCO: https://cocodataset.org/#download
 - Flickr30k: https://www.kaggle.com/datasets/adityajn105/flickr8k
-For performance benchmarking, we curated a specific subset of 500 images (250 images each from the MSCOCO and Flickr8k datasets) along with their ground-truth reference captions. You can then download the subset of dataset go to data/subset_images_reference_captions.csv
+For performance benchmarking, we curated a specific subset of 500 images (250 images each from the MSCOCO and Flickr8k datasets) along with their ground-truth reference captions. You can then download the subset of dataset go to `data/subset_images_reference_captions.csv/`
 
 •	Clone the repository:
 
@@ -110,9 +110,8 @@ tqdm
     * Top_p: 1
 
 ## Usage Instructions                  
-The complete pipline flow can be found in model/captioning.ipynb, with more complete documentation.
+The complete pipline workflow can be found in `model/captioning.ipynb/`.
 
-[`evaluation/`](./evaluation)
 #  Results
 The system generates:
     
@@ -120,7 +119,12 @@ The system generates:
 2.	Scene Graph Visualization: Graph showing spatial relationships.
 3.	Natural Language Captions: Context-aware descriptions.
 
-**Evaluation**  
-Standard matrics  BLEU, ROUGE, METEOR, CIDEr, and SPICE are use to evaluste performance of propose pipline and baseline models. you can be seen at `evaluation/standard_matric/`
-Survery form: https://docs.google.com/forms/d/e/1FAIpQLSfkLlBj6UdrTU6Ixpb0UWGRRitybHly4YKqsxQ8nPMpE-chcA/viewform 
+Generated caption from proposed model and baseline models are found in `data/generated_caption_model/`.
 
+## Evaluation  
+Standard matrics  BLEU, ROUGE, METEOR, CIDEr, and SPICE are use to evaluste performance of propose pipline and baseline models. you can be seen at `evaluation/standard_matric/`.
+Experts evaluated captions from three models (M1–M3) on a five-point relevance scale using Google Forms: https://docs.google.com/forms/d/e/1FAIpQLSfkLlBj6UdrTU6Ixpb0UWGRRitybHly4YKqsxQ8nPMpE-chcA/viewform 
+Expert rating summary found at `data/expert_rating.csv/` and `data/expert_rating_summary`
+
+**Exploratory Data Analysis**
+The generated captions were further analyzed to assess how well three distinct models (M1, M2, and M3) performed, examining key aspects such as vocabulary richness, readability (average words per caption), sentiment alignment, similarity to ground-truth captions, and POS diversity. EDA found at `EDA/exploratory_data_analysis.ipynb`.
