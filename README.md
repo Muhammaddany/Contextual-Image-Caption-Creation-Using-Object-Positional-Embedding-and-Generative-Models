@@ -109,10 +109,10 @@ tqdm
     * Temperature: 0.7
     * Top_p: 1
 
-## Usage Instructions
+## Usage Instructions                  
+The complete pipline flow can be found in model/captioning.ipynb, with more complete documentation.
 
-
-
+[`evaluation/`](./evaluation)
 #  Results
 The system generates:
     
@@ -121,5 +121,6 @@ The system generates:
 3.	Natural Language Captions: Context-aware descriptions.
 
 **Evaluation**  
+Standard matrics  BLEU, ROUGE, METEOR, CIDEr, and SPICE are use to evaluste performance of propose pipline and baseline models. you can be seen at 'evaluation/standard_matric/'
 Survery form: https://docs.google.com/forms/d/e/1FAIpQLSfkLlBj6UdrTU6Ixpb0UWGRRitybHly4YKqsxQ8nPMpE-chcA/viewform 
 
