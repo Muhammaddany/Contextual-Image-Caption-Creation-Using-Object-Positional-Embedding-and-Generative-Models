@@ -1,16 +1,6 @@
 ## Data Description
 
 This repository provides the minimal dataset required to reproduce the results reported in the manuscript.
-## Data Description and Availability
-
-This folder contains the minimal dataset required to reproduce the results reported in the manuscript.
-
-### Original Datasets
-The images originate from the following public datasets:
-- MS COCO: https://cocodataset.org
-- Flickr30k: https://shannon.cs.illinois.edu/DenotationGraph/
-
-To conduct performance testing of different models, we have selected 250 images from each dataset
 
 ### Subset Construction
 A balanced subset was created consisting of:
