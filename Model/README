@@ -1,1 +1,11 @@
-
+Follow the sequence of code 
+# Upload images Dataset
+# first create a directory to store the model
+# enter the directory and download the necessary files
+# Image Preprocessing: Convert Image to Blob
+# declare repeating bounding box colors for each class
+# Load the pre-trained model
+# Scene Graph Generation
+# Install dependencies
+# Clone the repository
+# caption creation
