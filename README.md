@@ -1,5 +1,3 @@
-<img width="995" height="140" alt="image" src="https://github.com/user-attachments/assets/2bfc4003-1083-4c52-9df1-55254703c7b2" /># Contextual-Image-Caption-Creation-Using-Object-Positional-Embedding-and-Generative-Models
-
 ## Overview
 This research presents a novel approach to image captioning by integrating object detection, spatial relationship modeling, and advanced language generation. The system leverages YOLOv5 for precise object detection, constructs scene graphs to capture spatial relationships, and utilizes Generative model to generate contextually rich captions. In our scenario, caption generation is the assigned task. Multiple models are integrated with the state-of-the-art language generator transformer. For performance evauation use Standard martic and  an  expert survey was conducted to assess caption fluency and relevance. The survey link is included at the end of this repository.
 Getting Started
@@ -35,24 +33,6 @@ For performance benchmarking, we curated a specific subset of 500 images (250 im
 * **Caption Generation:** Employs GPT models for contextually rich captions. 
 
 * **Cross-Platform Compatibility:** Supports Windows, macOS, and Linux environments.
-
-## Project Structure
-.  
-├── model/  
-│   ├── yolov5.weights  
-│   ├── yolov5.cfg  
-│   └── coco.names  
-├── src/  
-│   ├── object_detection.py  
-│   ├── scene_graph.py  
-│   ├── caption_generator.py  
-│   └── utils.py  
-├── output/  
-│   ├── detections.txt  
-│   ├── detections.csv  
-│   └── scene_graph.json  
-├── requirements.txt  
-└── README.md
 
 
 ## Installation
@@ -123,18 +103,14 @@ tqdm
 ## Caption Generation
 * **Technology:** GPT model (gpt-4-turbo)
 * **Parameters:** 
-    * Prompt Length: 100 tokens
-    * Max tokens: 200 tokens
+    * Prompt Length: 150 tokens
+    * Max tokens: 100 tokens
     * Temperature: 0.7
     * Top_p: 1
 
 ## Usage Instructions
 
-**1. Upload images Dataset**
-**2. Image preprocessing**
-**3. Object Detection**
-**4. Scene Graph Generation**
-**5. Caption Generation**
+
 
 #  Results
 The system generates:
