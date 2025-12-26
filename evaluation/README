@@ -1,11 +1,9 @@
-
-This directory contains all scripts and outputs used to evaluate the performance of the proposed image captioning model and baseline models. Evaluation is performed using standard automatic metrics as well as visual analysis through heatmaps.
-
+This directory contains all scripts and outputs used to evaluate the performance of the proposed image captioning model and baseline models. 
+Evaluation is performed using standard automatic metrics as well as visual analysis through heatmaps.
 The following standard captioning metrics are used:
 - BLEU-1 and BLEU-4  
 - METEOR  
 - ROUGE-L  
 - CIDEr  
 - SPICE  
-
 These metrics measure different aspects of caption quality, including n-gram overlap, semantic similarity, and scene-level consistency.
