@@ -124,6 +124,7 @@ Generated caption from proposed model and baseline models are found in `data/gen
 
 ## Evaluation  
 Standard matrics  BLEU, ROUGE, METEOR, CIDEr, and SPICE are use to evaluste performance of propose pipline and baseline models. you can be seen at `evaluation/standard_matric/`.
+
 Experts evaluated captions from three models (M1–M3) on a five-point relevance scale using Google Forms: https://docs.google.com/forms/d/e/1FAIpQLSfkLlBj6UdrTU6Ixpb0UWGRRitybHly4YKqsxQ8nPMpE-chcA/viewform 
 Expert rating summary found at `data/expert_rating.csv/` and `data/expert_rating_summary`
 
