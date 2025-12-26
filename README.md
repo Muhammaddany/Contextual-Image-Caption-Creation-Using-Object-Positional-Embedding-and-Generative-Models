@@ -37,28 +37,28 @@ To ensure controlled and reproducible evaluation, a subset of 500 images was cur
 
 ### On Windows
 
-git clone https://github.com/Muhammaddany/Contextual-Image-Caption-Creation-Using-Object-Positional-Embedding-and-Generative-Models.git
-cd Contextual-Image-Caption-Creation-Using-Object-Positional-Embedding-and-Generative-Models
-pip install -r requirements.txt
+    git clone https://github.com/Muhammaddany/Contextual-Image-Caption-Creation-Using-Object-Positional-Embedding-and-Generative-Models.git
+    cd Contextual-Image-Caption-Creation-Using-Object-Positional-Embedding-and-Generative-Models
+    pip install -r requirements.txt
 
-mkdir model
-cd model
-curl -O https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_optimal/yolov5.weights
-curl -O https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov5.cfg
-curl -O https://raw.githubusercontent.com/AlexeyAB/darknet/master/data/coco.names
+    kdir model
+    cd model
+    curl -O https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_optimal/yolov5.weights
+    curl -O https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov5.cfg
+    curl -O https://raw.githubusercontent.com/AlexeyAB/darknet/master/data/coco.names
 
 
 ## Dependencies
-numpy==1.21.0  
-opencv-python==4.5.3  
-matplotlib==3.4.3  
-torch==1.9.0  
-torchvision==0.10.0  
-networkx==2.6.3  
-openai==0.27.0  
-cython  
-yacs  
-tqdm
+* Key dependencies include:
+* numpy
+* pandas
+* torch, torchvision
+* opencv-python
+* networkx
+* nltk
+* rouge-score
+* pycocotools, pycocoevalcap
+* matplotlib, seaborn
 
 ## Implementation Details
 
