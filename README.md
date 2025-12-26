@@ -10,7 +10,7 @@ This study is based on two publicly available benchmark datasets:
 - MS COCO: https://cocodataset.org/#download
 - Flickr8k: https://www.kaggle.com/datasets/adityajn105/flickr8k
 
-To ensure controlled and reproducible evaluation, a subset of 500 images was curated. The corresponding ground-truth reference captions are provided in: `data/subset_images_reference_captions.csv/`
+To ensure controlled and reproducible evaluation, a subset of 500 images was curated. The corresponding ground-truth reference captions are provided in: `data/subset_images_reference_captions.csv`
 
 ## Features
 * **Object Detection:** Utilizes YOLOv5 for accurate object detection. 
@@ -84,7 +84,7 @@ Key dependencies include:
     * Top_p: 1
 
 ## Usage                 
-The complete experimental pipeline is demonstrated in: `model/captioning.ipynb/`
+The complete experimental pipeline is demonstrated in: `model/captioning.ipynb`
 
 ##  Results
 The system generates:
@@ -93,7 +93,7 @@ The system generates:
 2.	Scene Graph representations
 3.	Context-aware natural language captions
 
-Generated captions from the proposed method and baseline models are available in: `data/generated_captions_models/`
+Generated captions from the proposed method and baseline models are available in: `data/generated_captions_models`
 
 ## Evaluation  
 **Standard Marics**
@@ -103,16 +103,16 @@ Performance is evaluated using standard metrics:
  * METEOR
  * CIDEr
  * SPICE
-Evaluation scripts and inputs are available in: `evaluation/standard_matric.ipynb/`
+Evaluation scripts and inputs are available in: `evaluation/standard_matric.ipynb`
 
 **Human Expert Evaluation**
 A human evaluation study was conducted using a five-point relevance scale via Google Forms: https://docs.google.com/forms/d/e/1FAIpQLSfkLlBj6UdrTU6Ixpb0UWGRRitybHly4YKqsxQ8nPMpE-chcA/viewform
 
-Aggregated expert ratings are provided in: `data/expert rating.csv/` or `data/expert_rating_summary`
+Aggregated expert ratings are provided in: `data/expert rating.csv` or `data/expert_rating_summary`
 
 **Exploratory Data Analysis**
-Exploratory analysis was performed, analyzed to assess how well three distinct models (M1, M2, and M3) performed, examining key aspects such as vocabulary richness, readability, sentiment alignment, similarity to ground-truth captions, and POS diversity. EDA notebooks are available at: `EDA/Exploratory_Data_Analysis.ipynb/`
+Exploratory analysis was performed, analyzed to assess how well three distinct models (M1, M2, and M3) performed, examining key aspects such as vocabulary richness, readability, sentiment alignment, similarity to ground-truth captions, and POS diversity. EDA notebooks are available at: `EDA/Exploratory_Data_Analysis.ipynb`
 
 ## Data Availability
-All minimal data required to reproduce the results reported in this study are publicly available in the `data/ directory of this repository/`.
+All minimal data required to reproduce the results reported in this study are publicly available in the `data/ directory of this repository`.
 
