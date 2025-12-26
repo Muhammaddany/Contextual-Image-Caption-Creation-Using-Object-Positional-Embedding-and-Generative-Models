@@ -5,7 +5,7 @@ This repository provides the minimal dataset required to reproduce the results r
 ### Subset Construction
 A balanced subset was created consisting of:
 - 250 images from MS COCO
-- 250 images from Flickr30k
+- 250 images from Flickr8k
 
 These images and their reference captions are listed in:
 - subset_images_reference_caption.csv
