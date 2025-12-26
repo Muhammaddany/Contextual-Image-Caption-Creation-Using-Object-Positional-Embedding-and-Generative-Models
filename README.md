@@ -10,7 +10,7 @@ This study is based on two publicly available benchmark datasets:
 - MS COCO: https://cocodataset.org/#download
 - Flickr8k: https://www.kaggle.com/datasets/adityajn105/flickr8k
 
-To ensure controlled and reproducible evaluation, a subset of 500 images was curated: (250 images each from the MSCOCO and Flickr8k datasets) The corresponding ground-truth reference captions are provided in: `data/subset_images_reference_captions.csv/`
+To ensure controlled and reproducible evaluation, a subset of 500 images was curated. The corresponding ground-truth reference captions are provided in: `data/subset_images_reference_captions.csv/`
 
 ## Features
 * **Object Detection:** Utilizes YOLOv5 for accurate object detection. 
