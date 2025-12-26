@@ -49,66 +49,69 @@ To ensure controlled and reproducible evaluation, a subset of 500 images was cur
 
 
 ## Dependencies
-* Key dependencies include:
-* numpy
-* pandas
-* torch, torchvision
-* opencv-python
-* networkx
-* nltk
-* rouge-score
-* pycocotools, pycocoevalcap
-* matplotlib, seaborn
+Key dependencies include:
+ * numpy
+ * pandas
+ * torch, torchvision
+ * opencv-python
+ * networkx
+ * nltk
+ * rouge-score
+ * pycocotools, pycocoevalcap
+ * matplotlib, seaborn
 
 ## Implementation Details
 
-### Object Detection Module
+### Object Detection
 
-* **Technology:** YOLOv5
-
-* **Image Preprocessing:**
-
-   * Resize to 416x416
-
-   * Blob conversion
-
-   * BGR to RGB conversion
-*  **Parameters:**
-
-     * Confidence threshold: 0.5
-     * Non-maximum suppression threshold: 0.4
+* **Model:** YOLOv5
+* **Preprocessing:** Image resizing, blob conversion, RGB transformation
+* **Parameters:**
+    * Confidence threshold: 0.5
+    * NMS threshold: 0.4
 
 ### Scene Graph Generation
-    
-* **Relationship Prediction:** Predict spatial and contextual relationships between objects.
-* **Graph Construction:** Use NetworkX to create a directed graph representing the scene.
+    * Predict spatial and contextual relationships between objects.
+    * Constructs directed graphs using NetworkX
 
 ### Caption Generation
-* **Technology:** GPT model (gpt-4-turbo)
+* **Model:** Transformer-based GPT model
 * **Parameters:** 
     * Prompt Length: 150 tokens
     * Max tokens: 100 tokens
     * Temperature: 0.7
     * Top_p: 1
 
-## Usage Instructions                  
-The complete pipline workflow can be found in `model/captioning.ipynb/`.
+## Usage                 
+The complete experimental pipeline is demonstrated in: `model/captioning.ipynb/`
 
 ##  Results
 The system generates:
     
-1. Object Detection Visualization: Image with bounding boxes and labels.
-2.	Scene Graph Visualization: Graph showing spatial relationships.
-3.	Natural Language Captions: Context-aware descriptions.
+1.  Object Detection Visualizations
+2.	Scene Graph representations
+3.	Context-aware natural language captions
 
-Generated caption from proposed model and baseline models are found in `data/generated_caption_model/`.
+Generated captions from the proposed method and baseline models are available in: `data/generated_captions_models/`
 
 ## Evaluation  
-Standard matrics  BLEU, ROUGE, METEOR, CIDEr, and SPICE are use to evaluste performance of propose pipline and baseline models. you can be seen at `evaluation/standard_matric/`.
+**Standard Marics**
+Performance is evaluated using standard metrics:
+ * BLEU
+ * ROUGE
+ * METEOR
+ * CIDEr
+ * SPICE
+Evaluation scripts and inputs are available in: `evaluation/standard_matric.ipynb/`
 
-Experts evaluated captions from three models (M1–M3) on a five-point relevance scale using Google Forms: https://docs.google.com/forms/d/e/1FAIpQLSfkLlBj6UdrTU6Ixpb0UWGRRitybHly4YKqsxQ8nPMpE-chcA/viewform
+**Human Expert Evaluation**
+A human evaluation study was conducted using a five-point relevance scale via Google Forms: https://docs.google.com/forms/d/e/1FAIpQLSfkLlBj6UdrTU6Ixpb0UWGRRitybHly4YKqsxQ8nPMpE-chcA/viewform
 
-Expert rating summary found at `data/expert_rating.csv/` and `data/expert_rating_summary`
+Aggregated expert ratings are provided in: `data/expert rating.csv/` or `data/expert_rating_summary`
 
 **Exploratory Data Analysis**
-The generated captions were further analyzed to assess how well three distinct models (M1, M2, and M3) performed, examining key aspects such as vocabulary richness, readability (average words per caption), sentiment alignment, similarity to ground-truth captions, and POS diversity. EDA found at `EDA/exploratory_data_analysis.ipynb`.
+Exploratory analysis was performed, analyzed to assess how well three distinct models (M1, M2, and M3) performed, examining key aspects such as vocabulary richness, readability, sentiment alignment, similarity to ground-truth captions, and POS diversity. EDA notebooks are available at: `EDA/Exploratory_Data_Analysis.ipynb/`
+
+## Data Availability
+All minimal data required to reproduce the results reported in this study are publicly available in the data/ directory of this repository.
+The original datasets (MS COCO and Flickr30k) are publicly available. 
