@@ -8,7 +8,8 @@ To start working with this project, follow these steps:
 ## Dataset Selection & Reproducibility
 This study is based on two publicly available benchmark datasets:
 - MS COCO: https://cocodataset.org/#download
-- Flickr30k: https://www.kaggle.com/datasets/adityajn105/flickr8k
+- Flickr8k: https://www.kaggle.com/datasets/adityajn105/flickr8k
+
 To ensure controlled and reproducible evaluation, a subset of 500 images was curated: (250 images each from the MSCOCO and Flickr8k datasets) The corresponding ground-truth reference captions are provided in: `data/subset_images_reference_captions.csv/`
 
 ## Features
@@ -114,4 +115,4 @@ Exploratory analysis was performed, analyzed to assess how well three distinct m
 
 ## Data Availability
 All minimal data required to reproduce the results reported in this study are publicly available in the data/ directory of this repository.
-The original datasets (MS COCO and Flickr30k) are publicly available. 
+The original datasets (MS COCO and Flickr8k) are publicly available. 
