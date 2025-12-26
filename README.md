@@ -1,31 +1,34 @@
 # Contextual Image Caption Creation Using Object Positional Embedding and Generative Models
 ## Overview
-This research presents a novel approach to image captioning by integrating object detection, spatial relationship modeling, and advanced language generation. The system leverages YOLOv5 for precise object detection, constructs scene graphs to capture spatial relationships, and utilizes Generative model to generate contextually rich captions. In our scenario, caption generation is the assigned task. Multiple models are integrated with the state-of-the-art language generator transformer. For performance evauation use Standard martic and  an  expert survey was conducted to assess caption fluency and relevance. The survey link is included at the end of this repository.
+This research presents a novel approach to image captioning by integrating object detection, spatial relationship modeling, and advanced language generation. The system leverages YOLOv5 for precise object detection, constructs scene graphs to capture spatial relationships, and utilizes Generative model to generate contextually rich captions. In our scenario, caption generation is the assigned task. Multiple models are integrated with the state-of-the-art language generator transformer. Performance is evaluated using standard automatic metrics as well as a human expert survey to assess caption relevance and fluency. The survey link is included at the end of this repository.
 
 **Getting Started**
 To start working with this project, follow these steps:
 
 ## Dataset Selection & Reproducibility
-The images originate from the following public datasets:
+This study is based on two publicly available benchmark datasets:
 - MS COCO: https://cocodataset.org/#download
 - Flickr30k: https://www.kaggle.com/datasets/adityajn105/flickr8k
-For performance benchmarking, we curated a specific subset of 500 images (250 images each from the MSCOCO and Flickr8k datasets) along with their ground-truth reference captions. You can then download the subset of dataset go to `data/subset_images_reference_captions.csv/`
+To ensure controlled and reproducible evaluation, a subset of 500 images was curated: (250 images each from the MSCOCO and Flickr8k datasets) The corresponding ground-truth reference captions are provided in: `data/subset_images_reference_captions.csv/`
 
 ## Features
 * **Object Detection:** Utilizes YOLOv5 for accurate object detection. 
 
 * **Scene Graph Generation:** Constructs spatial relationships between detected objects. 
 
-* **Caption Generation:** Employs GPT models for contextually rich captions. 
+* **Caption Generation:** Transformer-based generative models for contextual captions.
+  
+* **Evaluation:** Automatic metrics and human expert assessment.
 
-* **Cross-Platform Compatibility:** Supports Windows, macOS, and Linux environments.
+* **Cross-Platform Compatibility:** Windows, macOS, and Linux.
 
 ## Installation
 
 ### On Linux/macOS
-    git clone https://github.com/yourusername/contextual-image-caption.git
-    cd contextual-image-caption
+    git clone https://github.com/Muhammaddany/Contextual-Image-Caption-Creation-Using-Object-Positional-Embedding-and-Generative-Models.git
+    cd Contextual-Image-Caption-Creation-Using-Object-Positional-Embedding-and-Generative-Models
     pip install -r requirements.txt
+
     mkdir -p model && cd model
     wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_optimal/yolov5.weights
     wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov5.cfg
@@ -34,21 +37,16 @@ For performance benchmarking, we curated a specific subset of 500 images (250 im
 
 ### On Windows
 
-•	Install Git and clone the repository:
+git clone https://github.com/Muhammaddany/Contextual-Image-Caption-Creation-Using-Object-Positional-Embedding-and-Generative-Models.git
+cd Contextual-Image-Caption-Creation-Using-Object-Positional-Embedding-and-Generative-Models
+pip install -r requirements.txt
 
-    git clone https://github.com/yourusername/contextual-image-caption.git cd contextual-image-caption
+mkdir model
+cd model
+curl -O https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_optimal/yolov5.weights
+curl -O https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov5.cfg
+curl -O https://raw.githubusercontent.com/AlexeyAB/darknet/master/data/coco.names
 
-•	Install the required packages using pip:
-
-    pip install -r requirements.txt
-
-•	Download the necessary files:
-
-    mkdir model
-    cd model
-    curl -O https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_optimal/yolov5.weights
-    curl -O https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov5.cfg
-    curl -O https://raw.githubusercontent.com/AlexeyAB/darknet/master/data/coco.names
 
 ## Dependencies
 numpy==1.21.0  
