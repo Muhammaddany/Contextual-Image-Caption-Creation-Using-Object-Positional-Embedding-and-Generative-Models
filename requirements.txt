@@ -6,3 +6,11 @@ matplotlib
 seaborn
 pycocotools
 pycocoevalcap
+opencv-python==4.5.3   
+torch==1.9.0  
+torchvision==0.10.0  
+networkx==2.6.3  
+openai==0.27.0  
+cython  
+yacs  
+tqdm
