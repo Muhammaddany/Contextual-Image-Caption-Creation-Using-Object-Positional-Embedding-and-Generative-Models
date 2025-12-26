@@ -11,22 +11,6 @@ The images originate from the following public datasets:
 - Flickr30k: https://www.kaggle.com/datasets/adityajn105/flickr8k
 For performance benchmarking, we curated a specific subset of 500 images (250 images each from the MSCOCO and Flickr8k datasets) along with their ground-truth reference captions. You can then download the subset of dataset go to `data/subset_images_reference_captions.csv/`
 
-•	Clone the repository:
-
-    git clone https://github.com/yourusername contextual-image-caption.git cd contextual-image-caption
-
-•	Install the required packages:
-
-    pip install -r requirements.txt
-
-•	Download the YOLOv5 weights and configuration files
-
-    mkdir -p model
-    cd model
-    wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_optimal/yolov5.weights
-    wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov5.cfg
-    wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/data/coco.names
-
 ## Features
 * **Object Detection:** Utilizes YOLOv5 for accurate object detection. 
 
@@ -35,7 +19,6 @@ For performance benchmarking, we curated a specific subset of 500 images (250 im
 * **Caption Generation:** Employs GPT models for contextually rich captions. 
 
 * **Cross-Platform Compatibility:** Supports Windows, macOS, and Linux environments.
-
 
 ## Installation
 
