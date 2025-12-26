@@ -114,5 +114,5 @@ Aggregated expert ratings are provided in: `data/expert rating.csv/` or `data/ex
 Exploratory analysis was performed, analyzed to assess how well three distinct models (M1, M2, and M3) performed, examining key aspects such as vocabulary richness, readability, sentiment alignment, similarity to ground-truth captions, and POS diversity. EDA notebooks are available at: `EDA/Exploratory_Data_Analysis.ipynb/`
 
 ## Data Availability
-All minimal data required to reproduce the results reported in this study are publicly available in the data/ directory of this repository.
-The original datasets (MS COCO and Flickr8k) are publicly available. 
+All minimal data required to reproduce the results reported in this study are publicly available in the `data/ directory of this repository`/.
+
