@@ -80,12 +80,12 @@ tqdm
      * Confidence threshold: 0.5
      * Non-maximum suppression threshold: 0.4
 
-## Scene Graph Generation
+### Scene Graph Generation
     
 * **Relationship Prediction:** Predict spatial and contextual relationships between objects.
 * **Graph Construction:** Use NetworkX to create a directed graph representing the scene.
 
-## Caption Generation
+### Caption Generation
 * **Technology:** GPT model (gpt-4-turbo)
 * **Parameters:** 
     * Prompt Length: 150 tokens
@@ -96,7 +96,7 @@ tqdm
 ## Usage Instructions                  
 The complete pipline workflow can be found in `model/captioning.ipynb/`.
 
-#  Results
+##  Results
 The system generates:
     
 1. Object Detection Visualization: Image with bounding boxes and labels.
